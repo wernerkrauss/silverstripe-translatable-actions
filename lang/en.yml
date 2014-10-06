@@ -1,0 +1,5 @@
+en:
+  I18nContentController:
+    action_author: author
+    action_show: show
+    action_tag: tag

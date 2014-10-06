@@ -1,0 +1,5 @@
+de:
+  I18nContentController:
+    action_author: autor
+    action_show: zeigen
+    action_tag: schlagwort
