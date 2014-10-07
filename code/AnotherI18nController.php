@@ -15,6 +15,9 @@ class AnotherI18nController extends I18nContentController
 		parent::init();
 	}
 
+	private static $url_handlers = array(
+		'foo/$Bla/$Baz' => 'someOtherAction'
+	);
 
 	public function someOtherAction(){
 		return $this->customise(array('Action' => 'someOtherAction'))->renderWith(array('I18nContentController', 'Page'));

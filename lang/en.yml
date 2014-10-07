@@ -1,8 +1,11 @@
 en:
   AnotherI18nController:
     action_someOtherAction: someOtherAction
+    urlhandler_foo_$Bla_$Baz: foo/$Bla/$Baz
   I18nContentController:
     action_author: author
     action_index: index
     action_show: show
     action_tag: tag
+    urlhandler_author_$AuthorID_$Foo: author/$AuthorID/$Foo
+    urlhandler_show_$ID_$OtherID: show/$ID/$OtherID
