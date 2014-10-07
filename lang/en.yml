@@ -1,5 +1,8 @@
 en:
+  AnotherI18nController:
+    action_someOtherAction: someOtherAction
   I18nContentController:
     action_author: author
+    action_index: index
     action_show: show
     action_tag: tag

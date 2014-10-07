@@ -25,7 +25,7 @@ class I18nContentController extends Controller implements i18nEntityProvider {
 
 		$urlHandlers = $this->stat('url_handlers');
 
-		foreach ($this->stat('allowed_actions') as $action) {
+		foreach ($this->allowedActions() as $action) {
 			$translatedAction = $this->getTranslatedActionName($action);
 			if ($translatedAction != $action) {
 				$urlHandler =
@@ -35,8 +35,9 @@ class I18nContentController extends Controller implements i18nEntityProvider {
 
 		// update config
 		$this->config()->url_handlers = $translatedUrlHandlers;
-
 	}
+
+
 
 
 	/**
@@ -71,7 +72,9 @@ class I18nContentController extends Controller implements i18nEntityProvider {
 	 * @return string
 	 */
 	public function getTranslatedActionName($action){
-		return _t("{$this->class}.action_{$action}", $action);
+		//we have to check parent classes as well
+		$class = $this->definingClassForAction($action);
+		return _t("{$class}.action_{$action}", $action);
 	}
 
 

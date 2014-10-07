@@ -1,5 +1,8 @@
 de:
+  AnotherI18nController:
+    action_someOtherAction: was-anderes
   I18nContentController:
     action_author: autor
+    action_index: index
     action_show: zeigen
     action_tag: schlagwort
